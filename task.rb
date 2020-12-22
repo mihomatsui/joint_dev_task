@@ -30,7 +30,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete_if {|a| a == nil}
+  sports.compact!
   # 以下は変更しないで下さい
   p sports
 end
@@ -48,7 +48,7 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = numbers1.map {|x| x * 10 }
+  numbers2 = numbers1.map {|num| num * 10 }
   p numbers2
 end
 
