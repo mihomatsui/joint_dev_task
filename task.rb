@@ -65,7 +65,7 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages.each{|language|language.capitalize!}
+
 
   # 以下は変更しないで下さい
   p programming_languages
