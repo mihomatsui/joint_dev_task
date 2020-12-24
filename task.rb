@@ -77,7 +77,8 @@ def q9
 
   # 以下に回答を記載
   names.each.with_index(1) do |name,i|
-  puts "会員No.#{i} #{name}さん"
+    puts "会員No.#{i} #{name}さん"
+  end
 end
 
 def q10
