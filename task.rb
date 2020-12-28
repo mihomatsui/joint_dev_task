@@ -150,11 +150,9 @@ def q16
   ]
 
   # 以下に回答を記載
-  puts "私の名前は#{users[0][:name]}です。年齢は#{users[0][:age]}歳です。"
-  puts "私の名前は#{users[1][:name]}です。年齢は#{users[1][:age]}歳です。"
-  puts "私の名前は#{users[2][:name]}です。年齢は#{users[2][:age]}歳です。"
-  puts "私の名前は#{users[3][:name]}です。年齢は#{users[3][:age]}歳です。"
-  
+  users.each.with_index do |user,i|
+    puts "私の名前は#{users[i][:name]}です。年齢は#{users[i][:age]}歳です。"
+  end
 end
 class UserQ17
   # 以下に回答を記載
