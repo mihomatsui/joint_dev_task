@@ -99,8 +99,7 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  sports.flatten!
-  sports.uniq!
+  sports.flatten!.uniq!
 
   puts "ユーザーの趣味一覧"
   sports.each.with_index(1) do |sport,i|
@@ -120,14 +119,17 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  user_data[:age] = 32
+  user_data[:address] = "沖縄"
+  puts user_data
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+    array = data.keys
+    p array
 end
 
 def q15
@@ -135,7 +137,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  (data1.key?(:age)) ? (puts "OK") : (puts "NG")
+  (data2.key?(:age)) ? (puts "OK") : (puts "NG")
 end
 
 def q16
@@ -147,9 +150,10 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each.with_index do |user,i|
+    puts "私の名前は#{users[i][:name]}です。年齢は#{users[i][:age]}歳です。"
+  end
 end
-
 class UserQ17
   # 以下に回答を記載
 
