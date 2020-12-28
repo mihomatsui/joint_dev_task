@@ -150,12 +150,11 @@ def q16
   ]
 
   # 以下に回答を記載
-  new_user = users.to_a
-  puts new_user
-  new_user.each do |key, value|
-    puts "キー: #{key}"
-    puts "バリュー: #{value}"
-  end
+  puts "私の名前は#{users[0][:name]}です。年齢は#{users[0][:age]}歳です。"
+  puts "私の名前は#{users[1][:name]}です。年齢は#{users[1][:age]}歳です。"
+  puts "私の名前は#{users[2][:name]}です。年齢は#{users[2][:age]}歳です。"
+  puts "私の名前は#{users[3][:name]}です。年齢は#{users[3][:age]}歳です。"
+  
 end
 class UserQ17
   # 以下に回答を記載
