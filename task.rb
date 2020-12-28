@@ -137,8 +137,16 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  p data1.key?(:age)
-  p data2.key?(:age)
+  if data1.key?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
+  if data2.key?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
 end
 
 def q16
@@ -150,9 +158,13 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  new_user = users.to_a
+  puts new_user
+  new_user.each do |key, value|
+    puts "キー: #{key}"
+    puts "バリュー: #{value}"
+  end
 end
-
 class UserQ17
   # 以下に回答を記載
 
