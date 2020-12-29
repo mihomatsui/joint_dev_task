@@ -154,13 +154,16 @@ def q16
 end
 class UserQ17
   # 以下に回答を記載
+
+  # セッター&ゲッター
   attr_accessor :name, :age, :gender
-  def initialize(name, age, gender)
-    @name = name
-    @age = age
-    @gender = gender
+  def initialize(info)
+    @name = info[:name]
+    @age = info[:age]
+    @gender = info[:gender]
   end
 end
+
 
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
