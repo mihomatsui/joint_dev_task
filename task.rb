@@ -154,14 +154,23 @@ def q16
 end
 class UserQ17
   # 以下に回答を記載
+  def initialize(params)
+      @name = params[:name]
+      @age = params[:age]
+      @gender = params[:gender]
+  end
 
+  def info
+    puts "名前：#{@name}"
+    puts "年齢：#{@age}"
+    puts "性別：#{@gender}"
+  end
 end
 
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
   user1 = UserQ17.new(name: "神里", age: 32, gender: "男")
   user2 = UserQ17.new(name: "あじー", age: 32, gender: "男")
-
   user1.info
   puts "-------------"
   user2.info
