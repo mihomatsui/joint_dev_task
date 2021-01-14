@@ -215,12 +215,18 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 end
 
 class Zoo
   # 以下に回答を記載
-
+  def info_entry_fee(user)
+    #ageとfeeの紐付けが必要
+    puts "#{@name} さんの入場料金は#{@price}円です"
+  end
 end
 
 
