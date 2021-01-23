@@ -230,17 +230,17 @@ class Zoo
   end
 
   def info_entry_fee(user)
-    case user.age
+    @user_entry_fee = case user.age
     when 0..5
-      @entry_fee = 0
+      @entry_fee[:infant]
     when 6..12
-      @entry_fee = 400
+      @entry_fee[:children]
     when  13..64
-      @entry_fee = 800
-    else  65..120
-      @entry_fee = 500
+      @entry_fee[:adult]
+    when  65..120
+      @entry_fee[:senior]
     end
-    puts "#{user.name}さんの入場料金は #{@entry_fee} 円です。"
+    puts "#{user.name}さんの入場料金は #{@user_entry_fee} 円です。"
   end
 end
 
