@@ -237,7 +237,7 @@ class Zoo
       @entry_fee = 400
     when  13..64
       @entry_fee = 800
-    else  65..120
+    when  65..120
       @entry_fee = 500
     end
     puts "#{user.name}さんの入場料金は #{@entry_fee} 円です。"
